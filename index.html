@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Listing</title>
+  <style>
+    /* Common styles for both pages */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Navbar styles */
+    .navbar {
+      background-color: #f5f5f5;
+      padding: 10px;
+      display: flex;
+      justify-content: center; /* Center the items horizontally */
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .company-logo {
+      width: 107px;
+      height: 105px;
+      margin-right: 10px;
+    }
+    
+    .cart-icon {
+      font-size: 24px;
+      color: #333;
+      margin-left: 455px;
+    }
+    
+    /* Product listing styles */
+    h1 {
+      text-align: center;
+    }
+    
+    #product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    
+    .product-box {
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .product-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .product-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .product-box h3 {
+      margin-top: 10px;
+    }
+    
+    .product-box p {
+      color: #777;
+    }
+    
+    .add-to-cart-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .add-to-cart-btn:hover {
+      background-color: #555;
+    }
+    
+    /* Footer styles */
+    .footer {
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .contact-email {
+      margin-bottom: 10px;
+    }
+    
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .social-icons li {
+      margin: 0 5px;
+    }
+    
+    .name-field {
+      margin-bottom: 10px;
+    }
+    
+    .copyright {
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="images/eternity_files/logo.jpg" alt="Company Logo" class="company-logo">
+    </a>
+  </div>
+  
+  <h1>Product Listing</h1>
+  <a href="cart.html" class="cart-icon" id="cartIcon">🛒 0</a>
+
+  <div id="product-list">
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $10</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $15</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Price: $20</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 3', 20)">Add to Cart</button>
+    </div>
+  </div>
+  
+
+
+  <div id="product-list">
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $10</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $15</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Price: $20</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 3', 20)">Add to Cart</button>
+    </div>
+  </div>
+  
+
+
+
+
+
+  
+  <div id="product-list">
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Price: $10</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Price: $15</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
+    
+    <div class="product-box">
+      <img src="images/eternity_files/1.png" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Price: $20</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Product 3', 20)">Add to Cart</button>
+    </div>
+  </div>
+  
+
+  <footer class="footer">
+
+    
+    <ul class="social-icons">
+      <li><a href="#"><img src="images/icons8-instagram-24.png" alt="Instagram"></a></li>
+      <li><a href="#"><img src="images/icons8-facebook-50.png" alt="Facebook"></a></li>
+    </ul>
+    
+   
+    
+    <p class="copyright">
+      &copy; 2023 Your Company. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    function addToCart(productName, price) {
+      // Add the product to the shopping cart
+      // You can use localStorage, session storage, or a server-side solution to store the cart data
+      // Here, we'll use localStorage as a simple example
+      
+      // Get the existing cart data from localStorage
+      let cartItems = localStorage.getItem('cartItems');
+      
+      // If no cart data exists, create an empty array
+      if (!cartItems) {
+        cartItems = [];
+      } else {
+        // Parse the cart data into an array
+        cartItems = JSON.parse(cartItems);
+      }
+      
+      // Add the new item to the cart array
+      cartItems.push({ name: productName, price: price });
+      
+      // Save the updated cart data back to localStorage
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      
+      // Redirect to the shopping cart page
+      window.location.href = 'cart.html';
+    }
+
+    // Update the cart icon count when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      let cartItems = localStorage.getItem('cartItems');
+      let cartIcon = document.getElementById('cartIcon');
+      if (cartItems) {
+        cartItems = JSON.parse(cartItems);
+        let cartCount = cartItems.length;
+        cartIcon.textContent = '🛒 ' + cartCount;
+      }
+    });
+  </script>
+</body>
+</html>
