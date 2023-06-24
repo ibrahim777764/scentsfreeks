@@ -15,12 +15,19 @@
     }
     
     form {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
+      max-width: 514px;
+      margin: 69px auto;
+      padding: 72px;
+      background-color: #163f4e;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 96 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 2.3s, box-shadow 0.3s;
+      color: #ffffff;
+    }
+    
+    form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
     
     form div {
@@ -35,6 +42,7 @@
     
     input[type="text"],
     input[type="email"],
+    input[type="tel"],
     textarea {
       width: 100%;
       padding: 10px;
@@ -50,15 +58,31 @@
       display: block;
       width: 100%;
       padding: 10px;
-      background-color: #333;
-      color: #fff;
+      background-color: #ffffff;
+      color: #000000;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
     
     input[type="submit"]:hover {
-      background-color: #555;
+      background-color: #163f4e;
+    }
+
+    .go-back-button {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 11px;
+      transition: background-color 0.3s;
+    }
+
+    .go-back-button:hover {
+      background-color: #163f4e;
     }
   </style>
 </head>
@@ -75,6 +99,10 @@
       <input type="email" id="email" name="email" required>
     </div>
     <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div>
       <label for="address">Address:</label>
       <textarea id="address" name="address" required></textarea>
     </div>
@@ -84,7 +112,8 @@
       <!-- Dynamically display chosen products here -->
     </div>
 
-    <button type="submit">Place Order</button>
+    <input type="submit" value="Place Order">
+    <button class="go-back-button" onclick="goBack()">Go Back</button>
   </form>
 
   <script>
@@ -113,21 +142,7 @@
       let address = document.getElementById('address').value;
 
       // Prepare the email body
-      let subject = 'New Order';
-      let body = 'Name: ' + name + '\nEmail: ' + email + '\nAddress: ' + address + '\n\nChosen Products:\n';
-      cartItems.forEach(function(item) {
-        body += item.name + ' - $' + item.price + '\n';
-      });
-
-      // Construct the email URL
-      let emailUrl = 'mailto:your-ibrahimnaseer896@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-
-      // Open the email client with the pre-filled data
-      window.location.href = emailUrl;
-
-      // Clear the cart items after placing the order
-      localStorage.removeItem('cartItems');
-
+    
       // Redirect to a confirmation page
       window.location.href = 'confirmation.html';
     });
